@@ -1,0 +1,276 @@
+/*GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+/*VARIABLES*/
+/*BASIC STYLE*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 32px;
+  color: white;
+  margin: 30px auto;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: auto;
+}
+
+.btn {
+  padding: 15px 30px;
+  transition: 0.4s ease;
+  font-size: 17px;
+}
+
+.btn-black {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #ac0204;
+  border-radius: 50px;
+}
+.btn-black:hover {
+  background-color: #ac0204;
+}
+
+.btn-red {
+  background-color: #ac0204;
+  color: white;
+  border: 1px solid #ac0204;
+  border-radius: 50px;
+}
+.btn-red:hover {
+  transform: scale(110%);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.py {
+  padding: 100px 0;
+}
+
+/*MIXIN*/
+/*NAV*/
+nav {
+  background-color: black;
+  padding: 50px;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  nav .container {
+    width: 90vh;
+  }
+}
+nav .container .logo {
+  flex: 0 0 85%;
+}
+@media (max-width: 767px) {
+  nav .container .logo {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+}
+nav .container .logo a {
+  font-size: 3rem;
+  color: #ac0204;
+  transition: 0.4s ease;
+}
+nav .container .logo a:hover {
+  color: #34535f;
+}
+nav .container .button {
+  flex: 0 0 15%;
+}
+@media (max-width: 767px) {
+  nav .container .button {
+    flex: 0 0 100%;
+    text-align: center;
+    margin: 20px;
+  }
+}
+
+/*Header**/
+header {
+  background-image: url(img/header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+header h1 {
+  padding-top: 180px;
+  color: white;
+  font-size: 42px;
+  font-weight: 700;
+}
+header h3 {
+  font-size: 1.8rem;
+  color: white;
+  padding: 60px;
+  font-weight: 700;
+}
+header p {
+  font-size: 22px;
+  color: white;
+  padding: 60px;
+}
+header p a {
+  color: #ac0204;
+  text-decoration: underline;
+}
+
+/*cta**/
+.cta {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cta div {
+  flex: 0 0 50%;
+}
+@media (max-width: 767px) {
+  .cta div {
+    flex: 0 0 100%;
+  }
+}
+.cta p {
+  font-size: 17px;
+  color: white;
+  margin: 30px auto;
+}
+
+/*CTA**/
+.CTA {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.CTA div {
+  flex: 0 0 50%;
+}
+@media (max-width: 767px) {
+  .CTA div {
+    flex: 0 0 100%;
+  }
+}
+.CTA div h2 {
+  margin: 40px;
+}
+.CTA img {
+  width: 100%;
+}
+.CTA .btn {
+  margin: 40px;
+}
+
+/**Ponuda*/
+.ponuda {
+  background-color: black;
+}
+.ponuda .container h2 {
+  margin: 0;
+}
+.ponuda .container p {
+  font-size: 17px;
+  color: white;
+  padding: 60px;
+}
+.ponuda .container .img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.ponuda .container .img div {
+  flex: 0 0 30%;
+  margin: 10px;
+}
+@media (max-width: 767px) {
+  .ponuda .container .img div {
+    flex: 0 0 100%;
+  }
+}
+.ponuda .container .img div:hover {
+  transform: scale(110%);
+}
+
+/**Registruj se*/
+.registruj {
+  background-image: linear-gradient(to bottom, #220609, #102544, white, black);
+}
+.registruj .container p {
+  padding: 60px;
+}
+.registruj .container h2 {
+  color: black;
+}
+.registruj .container .registration {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.registruj .container .registration div {
+  flex: 0 0 24%;
+}
+@media (max-width: 767px) {
+  .registruj .container .registration div {
+    flex: 0 0 100%;
+  }
+}
+.registruj .container .registration div i {
+  font-size: 3rem;
+}
+.registruj .container .registration div i:hover {
+  transform: scale(110%);
+  color: white;
+}
+.registruj .container .registration div h4 {
+  font-size: 2rem;
+  margin: 20px;
+}
+.registruj .container .registration div h4:hover {
+  color: white;
+}
+.registruj .container .registration .btn-red {
+  margin: 20px auto;
+}
+
+/*FOOTER**/
+footer {
+  background-color: black;
+}
+footer .container p {
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */

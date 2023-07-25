@@ -1,0 +1,251 @@
+/*GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+/*VARIABLES*/
+$black: black;
+$white: white;
+$accents:#34535f;
+$secondary: #ac0204;
+$transition: 0.4s ease;
+/*BASIC STYLE*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+a {
+    text-decoration: none;
+}
+h2  {
+    font-size: 32px;
+    color: $white;
+    margin: 30px auto;
+} 
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: auto;
+}
+.btn {
+    padding: 15px 30px;
+    transition: $transition;
+    font-size: 17px;
+}
+.btn-black {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $secondary;
+    border-radius: 50px;
+    &:hover {
+        background-color: $secondary;
+    }
+}
+.btn-red {
+    background-color: $secondary;
+    color: $white;
+    border: 1px solid $secondary;
+    border-radius: 50px;
+    &:hover {
+        transform: scale(110%);
+    }
+}
+.text-center {
+    text-align: center;
+}
+.py {
+    padding: 100px 0;
+
+}
+/*MIXIN*/
+@mixin flex($justify,$align, $direction, $wrap) {
+   display: flex;
+   justify-content: $justify;
+   align-items: $align;
+   flex-direction: $direction;
+   flex-wrap: $wrap;
+}
+/*NAV*/
+nav {
+    background-color: $black;
+    padding: 50px;
+    .container {
+        @include flex(space-between, center, row, wrap);
+        @media (max-width:767px){
+            width: 90vh;
+        }
+    .logo {
+        flex: 0 0 85%; 
+        @media (max-width:767px){
+            flex:0 0 100%;
+            text-align: center;
+        }
+        a {
+            font-size: 3rem;
+            color: $secondary;
+            transition: $transition;
+            &:hover{
+                color: $accents;
+            }
+        } 
+    } 
+    .button {
+        flex: 0 0 15%;
+        @media (max-width:767px){
+            flex: 0 0 100%;
+            text-align: center;
+            margin: 20px;
+        }
+    }
+  
+    }  
+}
+/*Header**/
+header {
+    background-image: url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    h1 {
+        padding-top: 180px;
+        color: $white;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 1.8rem;
+        color: $white;
+        padding: 60px;
+        font-weight: 700;
+    }
+    p {
+        font-size: 22px;
+        color: $white;
+        padding: 60px;
+        a {
+            color: $secondary;
+            text-decoration: underline;
+        }
+    }
+}
+/*cta**/
+.cta {
+    background-color: $black;
+    @include flex(space-between,center,row, wrap);
+        div {
+            flex: 0 0 50%;
+            @media (max-width:767px){
+                flex: 0 0 100%;
+            }
+        }    
+        p {
+            font-size: 17px;
+            color: $white;
+            margin: 30px auto;
+        }
+    
+}
+
+/*CTA**/
+.CTA {
+    background-color: $black;
+    @include flex(space-between,center,row, wrap);
+    div {
+        flex: 0 0 50%;
+        @media (max-width:767px){
+            flex: 0 0 100%;
+        }
+        h2 {
+            margin: 40px;
+        }
+    }
+    img {
+        width: 100%;
+    }
+    .btn {
+        margin: 40px;
+    }
+}
+/**Ponuda*/
+.ponuda {
+    background-color: $black;
+    .container {
+        h2 {
+            margin: 0;
+        }
+        p {
+            font-size: 17px;
+            color: $white;
+            padding: 60px
+        }
+            .img {
+                @include flex(space-between,center,row,wrap);
+                div{
+                    flex: 0 0 30%;
+                    @media (max-width:767px){
+                        flex:0 0 100%;
+                    }
+                    margin: 10px;
+                    &:hover {
+                        transform: scale(110%);
+                    }
+                    
+                }
+            }
+    }
+}
+/**Registruj se*/
+.registruj {
+    background-image: linear-gradient(to bottom,
+    #220609,#102544,$white, $black);
+    .container {
+        p {
+            padding: 60px
+        }
+        h2 {
+            color: $black;
+        }
+        .registration {
+            @include flex(space-between,center,row,wrap);
+            div {
+                flex: 0 0 24%;
+                @media (max-width:767px){
+                    flex: 0 0 100%;
+                }
+                i {
+                    font-size: 3rem;
+                    &:hover {
+                        transform: scale(110%);
+                        color: $white;
+                    }
+                }
+                h4 {
+                    font-size: 2rem;
+                    margin: 20px;
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+            .btn-red {
+                margin: 20px auto;
+            }
+        }
+
+    }
+  
+}
+/*FOOTER**/
+footer {
+    background-color: $black;
+    .container {
+        p {
+            color: $white;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+    }
+}
